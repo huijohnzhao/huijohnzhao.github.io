@@ -6,12 +6,13 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    permissions: # <--- 新增的权限配置
-      contents: write # 赋予机器人写入仓库内容的权限
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-python@v4
         with:
           python-version: 3.x
-      - run: pip install mkdocs-material
+      # 👇 修改这一行 👇
+      - run: pip install mkdocs-material mkdocs-static-i18n
       - run: mkdocs gh-deploy --force
