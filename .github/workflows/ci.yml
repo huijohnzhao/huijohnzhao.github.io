@@ -6,6 +6,8 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    permissions: # <--- 新增的权限配置
+      contents: write # 赋予机器人写入仓库内容的权限
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-python@v4
