@@ -2,12 +2,12 @@
 site_name: "赵晖教授 | 北京交通大学"
 site_description: "赵晖教授的个人学术主页 - 研究方向：交通系统优化、网络韧性、智慧出行"
 site_author: "赵晖"
-site_url: "https://hiujohnzhao.github.io/"
+site_url: "https://huijohnzhao.github.io/"
 
-# 主题与功能配置 (可以与Lab Wiki保持一致)
+# 主题与功能配置
 theme:
   name: material
-  language: zh
+  language: zh #【关键】设置默认语言为中文
   palette:
     scheme: default
   features:
@@ -15,8 +15,36 @@ theme:
     - navigation.top
     - search.suggest
     - search.highlight
+    - content.code.annotate # 保留您之前的配置
+    - content.tabs.link # 保留您之前的配置
+    - navigation.indexes #【推荐】为每个section自动生成索引页
+    - navigation.instant #【推荐】页面切换更快
 
-# 导航栏设置 (示例)
+#【新增】插件配置 - 启用多语言支持
+plugins:
+  - search # 内置搜索功能需要显式启用
+  - i18n:
+      docs_structure: directory # 文件结构使用后缀，例如 page.en.md (或者使用 directory 结构)
+      languages:
+        - locale: zh # 中文配置
+          default: true # 设为默认语言
+          name: 中文 # 切换器中显示的名称
+          build: true # 构建此语言版本
+        - locale: en # 英文配置
+          name: English # 切换器中显示的名称
+          build: true # 构建此语言版本
+
+#【新增】额外配置 - 定义语言切换器等
+extra:
+  alternate: # 定义语言版本信息，供切换器使用
+    - name: 中文
+      link: /zh/
+      lang: zh
+    - name: English
+      link: /en/
+      lang: en
+
+# 导航栏设置 (现在是默认语言 zh 的导航)
 nav:
   - "🏠 首页": "index.md"
   - "👨‍🏫 个人简介": "about.md"
@@ -26,7 +54,7 @@ nav:
   - "📖 教授课程": "teaching.md"
   - "🔗 友情链接": "links.md"
 
-# Markdown扩展功能 (与Lab Wiki保持一致)
+# Markdown扩展功能 (保持不变)
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
@@ -42,7 +70,7 @@ markdown_extensions:
   - pymdownx.arithmatex:
       generic: true
 
-extra_javascript:
+extra_javascript: # (保持不变)
   - "javascripts/mathjax.js"
   - "https://polyfill.io/v3/polyfill.min.js?features=es6"
   - "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
