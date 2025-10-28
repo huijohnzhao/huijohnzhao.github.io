@@ -1,0 +1,48 @@
+# 网站信息
+site_name: "赵晖教授 | 北京交通大学"
+site_description: "赵晖教授的个人学术主页 - 研究方向：交通系统优化、网络韧性、智慧出行"
+site_author: "赵晖"
+site_url: "https://hiujohnzhao.github.io/"
+
+# 主题与功能配置 (可以与Lab Wiki保持一致)
+theme:
+  name: material
+  language: zh
+  palette:
+    scheme: default
+  features:
+    - navigation.tabs
+    - navigation.top
+    - search.suggest
+    - search.highlight
+
+# 导航栏设置 (示例)
+nav:
+  - "🏠 首页": "index.md"
+  - "👨‍🏫 个人简介": "about.md"
+  - "🔬 研究方向": "research.md"
+  - "📚 发表论文": "publications.md"
+  - "🎓 指导学生": "students.md"
+  - "📖 教授课程": "teaching.md"
+  - "🔗 友情链接": "links.md"
+
+# Markdown扩展功能 (与Lab Wiki保持一致)
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - admonition
+  - pymdownx.details
+  - pymdownx.tabbed:
+      alternate_style: true
+  - attr_list
+  - md_in_html
+  - pymdownx.arithmatex:
+      generic: true
+
+extra_javascript:
+  - "javascripts/mathjax.js"
+  - "https://polyfill.io/v3/polyfill.min.js?features=es6"
+  - "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
