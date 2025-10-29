@@ -26,7 +26,3 @@
 * [未来多模式出行服务 (整合低空经济)](research.md#multi-modal-mobility)
 
 欢迎对相关领域感兴趣的同行与潜在学生与我联系交流。
-
----
-
-#_[您可以在此添加您的个人照片，使用 Markdown 语法： `![赵晖教授照片](assets/images/zhaohui_photo.jpg)` (请确保图片已放入 `docs/assets/images/` 文件夹)]_
