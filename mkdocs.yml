@@ -7,7 +7,7 @@ site_url: "https://huijohnzhao.github.io/" # 确认正确
 # 主题与功能配置
 theme:
   name: material
-  language: zh # 默认语言为中文
+  language: en # 默认语言为中文
   palette:
     scheme: default
   features:
