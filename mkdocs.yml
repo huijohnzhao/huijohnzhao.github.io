@@ -27,12 +27,13 @@ plugins:
       docs_structure: folder # 确认使用基于目录的结构
       languages:
         - locale: zh # 中文配置
-          default: true
+          default: false
           name: 中文
           build: true
           # 中文版的导航直接使用顶层的 nav 配置
         - locale: en # 英文配置
           name: English
+          default: true
           build: true
           # 【关键】为英文版覆盖 site_name, site_description 和 nav
           site_name: "Prof. Hui Zhao | Beijing Jiaotong University"
@@ -50,10 +51,10 @@ plugins:
 extra:
   alternate:
     - name: 中文
-      link: / # 默认语言链接到根目录
+      link: /zh # 默认语言链接到根目录
       lang: zh
     - name: English
-      link: /en/ # 英文链接到 /en/ 子目录
+      link: / # 英文链接到 /en/ 子目录
       lang: en
 
 # 中文版的导航栏设置 (顶层 nav 作为默认语言 zh 的配置)
