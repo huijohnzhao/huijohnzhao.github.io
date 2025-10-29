@@ -1,13 +1,13 @@
-# 网站信息
+# 网站信息 (现在作为中文版的默认值)
 site_name: "赵晖教授 | 北京交通大学"
 site_description: "赵晖教授的个人学术主页 - 研究方向：交通系统优化、网络韧性、智慧出行"
 site_author: "赵晖"
-site_url: "https://huijohnzhao.github.io/"
+site_url: "https://[您的GitHub用户名].github.io/" # 确认正确
 
 # 主题与功能配置
 theme:
   name: material
-  language: zh #【关键】设置默认语言为中文
+  language: zh # 默认语言为中文
   palette:
     scheme: default
   features:
@@ -15,36 +15,48 @@ theme:
     - navigation.top
     - search.suggest
     - search.highlight
-    - content.code.annotate # 保留您之前的配置
-    - content.tabs.link # 保留您之前的配置
-    - navigation.indexes #【推荐】为每个section自动生成索引页
-    - navigation.instant #【推荐】页面切换更快
+    - content.code.annotate
+    - content.tabs.link
+    - navigation.indexes
+    - navigation.instant
 
-#【新增】插件配置 - 启用多语言支持
+# 插件配置 - 启用多语言支持，并覆盖配置
 plugins:
-  - search # 内置搜索功能需要显式启用
+  - search
   - i18n:
-      docs_structure: folder # 文件结构使用后缀，例如 page.en.md (或者使用 directory 结构)
+      docs_structure: folder # 确认使用基于目录的结构
       languages:
         - locale: zh # 中文配置
-          default: true # 设为默认语言
-          name: 中文 # 切换器中显示的名称
-          build: true # 构建此语言版本
+          default: true
+          name: 中文
+          build: true
+          # 中文版的导航直接使用顶层的 nav 配置
         - locale: en # 英文配置
-          name: English # 切换器中显示的名称
-          build: true # 构建此语言版本
+          name: English
+          build: true
+          # 【关键】为英文版覆盖 site_name, site_description 和 nav
+          site_name: "Prof. Hui Zhao | Beijing Jiaotong University"
+          site_description: "Prof. Hui Zhao's Personal Homepage - Research: Transportation Optimization, Network Resilience, Smart Mobility"
+          nav:
+            - "🏠 Homepage": "index.md"
+            - "👨‍🏫 About": "about.md"
+            - "🔬 Research": "research.md"
+            - "📚 Publications": "publications.md"
+            - "🎓 Students": "students.md"
+            - "📖 Teaching": "teaching.md"
+            - "🔗 Links": "links.md"
 
-#【新增】额外配置 - 定义语言切换器等
+# 额外配置 - 定义语言切换器
 extra:
-  alternate: # 定义语言版本信息，供切换器使用
+  alternate:
     - name: 中文
-      link: /zh/
+      link: / # 默认语言链接到根目录
       lang: zh
     - name: English
-      link: /en/
+      link: /en/ # 英文链接到 /en/ 子目录
       lang: en
 
-# 导航栏设置 (现在是默认语言 zh 的导航)
+# 中文版的导航栏设置 (顶层 nav 作为默认语言 zh 的配置)
 nav:
   - "🏠 首页": "index.md"
   - "👨‍🏫 个人简介": "about.md"
