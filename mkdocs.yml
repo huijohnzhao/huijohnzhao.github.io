@@ -2,7 +2,7 @@
 site_name: "赵晖教授 | 北京交通大学"
 site_description: "赵晖教授的个人学术主页 - 研究方向：交通系统优化、网络韧性、智慧出行"
 site_author: "赵晖"
-site_url: "https://[您的GitHub用户名].github.io/" # 确认正确
+site_url: "https://huijohnzhao.github.io/" # 确认正确
 
 # 主题与功能配置
 theme:
