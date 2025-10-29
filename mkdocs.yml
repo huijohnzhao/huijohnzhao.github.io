@@ -24,7 +24,7 @@ theme:
 plugins:
   - search # 内置搜索功能需要显式启用
   - i18n:
-      docs_structure: directory # 文件结构使用后缀，例如 page.en.md (或者使用 directory 结构)
+      docs_structure: folder # 文件结构使用后缀，例如 page.en.md (或者使用 directory 结构)
       languages:
         - locale: zh # 中文配置
           default: true # 设为默认语言
